@@ -33,14 +33,14 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: ${{ github.ref_type == 'branch' && github.ref_name == 'main' }}
         with:
+          name: "Development Build"
           tag_name: "latest"
           prerelease: true
-          title: "Development Build"
           generate_release_notes: true
           files: |
             openchamp_default.zip
             openchamp_default.zip.sha256
-            openchamp/manifest.json
+            manifest.json
 
       - name: "Release tagged version"
         uses: softprops/action-gh-release@v2
@@ -51,4 +51,4 @@ jobs:
           files: |
             openchamp_default.zip
             openchamp_default.zip.sha256
-            openchamp/manifest.json
+            manifest.json
