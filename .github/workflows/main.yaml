@@ -16,12 +16,12 @@ jobs:
 
       - name: generate the manifest  
         run: |
-          echo "{ \n" > manifest.json
-          echo "  \"version\": \"${{ github.ref_name }}\", \n" >> manifest.json
-          echo "  \"date\": \"$(date -Iseconds)\", \n" >> manifest.json
-          echo "  \"commit\": \"${{ github.sha }}\", \n" >> manifest.json
-          echo "  \"update_url\": \"https://github.com/OpenChamp/default_assets/releases\" \n" >> manifest.json
-          echo "} \n" >> manifest.json
+          echo "{" > manifest.json
+          echo "  \"version\": \"${{ github.ref_name }}\"," >> manifest.json
+          echo "  \"date\": \"$(date -Iseconds)\"," >> manifest.json
+          echo "  \"commit\": \"${{ github.sha }}\"," >> manifest.json
+          echo "  \"update_url\": \"https://github.com/OpenChamp/default_assets/releases\"" >> manifest.json
+          echo "}" >> manifest.json
 
       - name: generate the release zip archive
         run: zip -r openchamp_default.zip openchamp manifest.json LICENSE
@@ -34,7 +34,7 @@ jobs:
         if: ${{ github.ref_type == 'branch' && github.ref_name == 'main' }}
         with:
           name: "Development Build"
-          tag_name: "latest"
+          tag_name: "main"
           prerelease: true
           generate_release_notes: true
           files: |
