@@ -12,7 +12,7 @@ jobs:
     name: "Release"
     runs-on: "ubuntu-24.04"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: generate the manifest  
         run: |
@@ -30,10 +30,9 @@ jobs:
         run: sha256sum openchamp_default.zip > openchamp_default.zip.sha256
           
       - name: "Release latest"
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: softprops/action-gh-release@v2
         if: ${{ github.ref_type == 'branch' && github.ref_name == 'main' }}
         with:
-          repo_token: "${{ secrets.CI_GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
@@ -43,10 +42,9 @@ jobs:
             openchamp/manifest.json
 
       - name: "Release tagged version"
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: softprops/action-gh-release@v2
         if: ${{ github.ref_type == 'tag' && startsWith(github.ref_name, 'v') }}
         with:
-          repo_token: "${{ secrets.CI_GITHUB_TOKEN }}"
           prerelease: ${{ contains(github.ref_name, '-rc') }}
           files: |
             openchamp_default.zip
