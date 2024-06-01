@@ -1,0 +1,54 @@
+name: "main-ci"
+
+on: 
+  push:
+    branches-ignore:
+      - pages
+    tags-ignore:
+      - latest
+
+jobs:
+  releases:
+    name: "Release"
+    runs-on: "ubuntu-24.04"
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: generate the manifest  
+        run: |
+          echo "{ \n" > manifest.json
+          echo "  \"version\": \"${{ github.ref_name }}\", \n" >> manifest.json
+          echo "  \"date\": \"$(date -Iseconds)\", \n" >> manifest.json
+          echo "  \"commit\": \"${{ github.sha }}\", \n" >> manifest.json
+          echo "  \"update_url\": \"https://github.com/OpenChamp/default_assets/releases\" \n" >> manifest.json
+          echo "} \n" >> manifest.json
+
+      - name: generate the release zip archive
+        run: zip -r openchamp_default.zip openchamp manifest.json LICENSE
+
+      - name: generate the release sha256 checksum
+        run: sha256sum openchamp_default.zip > openchamp_default.zip.sha256
+          
+      - name: "Release latest"
+        uses: "marvinpinto/action-automatic-releases@latest"
+        if: ${{ github.ref_type == 'branch' && github.ref_name == 'main' }}
+        with:
+          repo_token: "${{ secrets.CI_GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            openchamp_default.zip
+            openchamp_default.zip.sha256
+            openchamp/manifest.json
+
+      - name: "Release tagged version"
+        uses: "marvinpinto/action-automatic-releases@latest"
+        if: ${{ github.ref_type == 'tag' && startsWith(github.ref_name, 'v') }}
+        with:
+          repo_token: "${{ secrets.CI_GITHUB_TOKEN }}"
+          prerelease: ${{ contains(github.ref_name, '-rc') }}
+          files: |
+            openchamp_default.zip
+            openchamp_default.zip.sha256
+            openchamp/manifest.json
