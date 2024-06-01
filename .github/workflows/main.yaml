@@ -33,9 +33,10 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: ${{ github.ref_type == 'branch' && github.ref_name == 'main' }}
         with:
-          automatic_release_tag: "latest"
+          tag_name: "latest"
           prerelease: true
           title: "Development Build"
+          generate_release_notes: true
           files: |
             openchamp_default.zip
             openchamp_default.zip.sha256
@@ -46,6 +47,7 @@ jobs:
         if: ${{ github.ref_type == 'tag' && startsWith(github.ref_name, 'v') }}
         with:
           prerelease: ${{ contains(github.ref_name, '-rc') }}
+          generate_release_notes: true
           files: |
             openchamp_default.zip
             openchamp_default.zip.sha256
