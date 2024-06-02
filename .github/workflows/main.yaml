@@ -2,10 +2,8 @@ name: "main-ci"
 
 on: 
   push:
-    branches-ignore:
-      - pages
-    tags-ignore:
-      - latest
+    branches:
+      - main
 
 jobs:
   releases:
@@ -13,11 +11,20 @@ jobs:
     runs-on: "ubuntu-24.04"
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: '2'
+
+      - name: Bump version and push tag
+        id: bump
+        uses: anothrNick/github-tag-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: false
 
       - name: generate the manifest  
         run: |
           echo "{" > manifest.json
-          echo "  \"version\": \"${{ github.ref_name }}\"," >> manifest.json
+          echo "  \"version\": \"${{ steps.bump.outputs.new_tag }}\"," >> manifest.json
           echo "  \"date\": \"$(date -Iseconds)\"," >> manifest.json
           echo "  \"commit\": \"${{ github.sha }}\"," >> manifest.json
           echo "  \"update_url\": \"https://github.com/OpenChamp/default_assets/releases\"" >> manifest.json
@@ -28,13 +35,6 @@ jobs:
 
       - name: generate the release sha256 checksum
         run: sha256sum openchamp_default.zip > openchamp_default.zip.sha256
-
-      - name: Bump version and push tag
-        id: bump
-        uses: anothrNick/github-tag-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: false
           
       - name: "Release latest"
         uses: softprops/action-gh-release@v2
