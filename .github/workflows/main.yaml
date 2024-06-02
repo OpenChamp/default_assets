@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: '2'
+          fetch-depth: '0'
 
       - name: Bump version and push tag
         id: bump
@@ -20,6 +20,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: false
+          TAG_CONTEXT: branch
 
       - name: generate the manifest  
         run: |
