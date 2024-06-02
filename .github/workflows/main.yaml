@@ -39,6 +39,7 @@ jobs:
       - name: "Release latest"
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.bump.outputs.new_tag }}
           files: |
             openchamp_default.zip
             openchamp_default.zip.sha256
