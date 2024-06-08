@@ -48,8 +48,11 @@ def load_patchdata(patachdata_dir) -> Dict:
 
         gamemode_manifest['files'] = gamemode_files
 
-        with open(os.path.join(gamemode_dir, 'manifest.json'), 'w') as f:
+        gamemode_manifest_path = os.path.join(gamemode_dir, 'manifest.json')
+        with open(gamemode_manifest_path, 'w') as f:
             f.write(json.dumps(gamemode_manifest, indent=4))
+
+        patchdata_files[gamemode_manifest_path] = get_file_hash(gamemode_manifest_path)
     
     return patchdata_files
 
