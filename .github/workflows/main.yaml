@@ -14,6 +14,11 @@ jobs:
         with:
           fetch-depth: '0'
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Bump version and push tag
         id: bump
         uses: anothrNick/github-tag-action@v1
@@ -22,14 +27,8 @@ jobs:
           WITH_V: false
           TAG_CONTEXT: branch
 
-      - name: generate the manifest  
-        run: |
-          echo "{" > manifest.json
-          echo "  \"version\": \"${{ steps.bump.outputs.new_tag }}\"," >> manifest.json
-          echo "  \"date\": \"$(date -Iseconds)\"," >> manifest.json
-          echo "  \"commit\": \"${{ github.sha }}\"," >> manifest.json
-          echo "  \"update_url\": \"https://github.com/OpenChamp/default_assets/releases\"" >> manifest.json
-          echo "}" >> manifest.json
+      - name: generate the manifest files
+        run: python manifests.py --version ${{ steps.bump.outputs.new_tag }}
 
       - name: generate the release zip archive
         run: zip -r openchamp_default.zip openchamp manifest.json LICENSE
