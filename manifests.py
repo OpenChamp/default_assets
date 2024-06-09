@@ -29,8 +29,8 @@ def load_patchdata(patachdata_dir) -> Dict:
         characters_dir = os.path.join(gamemode_dir, 'characters')
         items_dir = os.path.join(gamemode_dir, 'items')
 
-        characters = [f for f in os.listdir(characters_dir) if not f.startswith('.')]
-        items = [f for f in os.listdir(items_dir) if not f.startswith('.')]
+        characters = [f for f in os.listdir(characters_dir) if not f.startswith('.') and not f.endswith('.import')]
+        items = [f for f in os.listdir(items_dir) if not f.startswith('.') and not f.endswith('.import')]
 
         for character in characters:
             character_path = os.path.join(characters_dir, character)
@@ -58,13 +58,13 @@ def load_patchdata(patachdata_dir) -> Dict:
 
 def load_asset_type(asset_type_dir) -> Dict:
     files_dict = {}
-    files = [f for f in os.listdir(asset_type_dir) if not f.startswith('.')]
+    files = [f for f in os.listdir(asset_type_dir) if not f.startswith('.') and not f.endswith('.import')]
     
-    for file in files:
-        if os.path.isdir(file):
-            files_dict.update(load_asset_type(file))
+    for curr_file in files:
+        file_path = os.path.join(asset_type_dir, curr_file)
+        if os.path.isdir(file_path):
+            files_dict.update(load_asset_type(file_path))
         else:
-            file_path = os.path.join(asset_type_dir, file)
             hash = get_file_hash(file_path)
             files_dict[file_path] = hash
 
