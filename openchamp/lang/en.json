@@ -7,15 +7,16 @@
     "SETTING:CAMERA_MAX_ZOOM_LABEL": "maximum zoom out distance:",
     "SETTING:CAMERA_CENTERED": "keep camera centered on player",
     "SETTING:CAMERA_PAN_SENSITIVITY_LABEL": "camera pan sensitivity:",
-    "SETTINGS_MENU_CONFIRM": "confirm",
-    "SETTINGS_MENU_EXIT_GAME": "exit game",
+    "SETTINGS_MENU_CONFIRM": "Confirm",
+    "SETTINGS_MENU_EXIT_GAME": "Exit game",
 
-    "STARTUP:STATUS_CONNECTING": "connecting...",
-    "STARTUP:STATUS_CONNECT_CLIENT": "connecting as client...",
-    "STARTUP:STATUS_CLIENT_FAILED": "failed to connect to server",
-    "STARTUP:STATUS_CREATE_SERVER": "creating Server...",
-    "STARTUP:ATTEMPTS": "attempts: %d",
-    "STARTUP:HOST_GAME": "host game",
-    "STARTUP:RECONNECT": "reconnect",
-    "STARTUP:EXIT": "exit"
+    "STARTUP:STATUS_CONNECTING": "Connecting...",
+    "STARTUP:STATUS_CONNECT_CLIENT": "Connecting as client...",
+    "STARTUP:STATUS_CLIENT_FAILED": "Failed to connect to server",
+    "STARTUP:STATUS_CREATE_SERVER": "Creating server...",
+    "STARTUP:STATUS_CLIENT_CONNECTED": "Connetion established.",
+    "STARTUP:ATTEMPTS": "Attempts: %d",
+    "STARTUP:HOST_GAME": "Host game",
+    "STARTUP:RECONNECT": "Reconnect",
+    "STARTUP:EXIT": "Exit"
 }

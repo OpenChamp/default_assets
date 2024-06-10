@@ -14,6 +14,7 @@
     "STARTUP:STATUS_CONNECT_CLIENT": "Verbindet als Client...",
     "STARTUP:STATUS_CLIENT_FAILED": "Verbindung zum Server fehlgeschlagen",
     "STARTUP:STATUS_CREATE_SERVER": "Server wird erstellt...",
+    "STARTUP:STATUS_CLIENT_CONNECTED": "Verbindung hergestellt",
     "STARTUP:ATTEMPTS": "Versuche: %d",
     "STARTUP:HOST_GAME": "Spiel hosten",
     "STARTUP:RECONNECT": "erneut verbinden",
