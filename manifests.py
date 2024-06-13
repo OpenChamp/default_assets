@@ -36,14 +36,14 @@ def load_patchdata(patachdata_dir) -> Dict:
             character_path = os.path.join(characters_dir, character)
 
             hash = get_file_hash(character_path)
-            gamemode_files["characters/" + character] = hash
+            gamemode_files[hash] = "characters/" + character
             patchdata_files[character_path] = hash
 
         for item in items:
             item_path = os.path.join(items_dir, item)
 
             hash = get_file_hash(item_path)
-            gamemode_files["items/" + item] = hash
+            gamemode_files[hash] = "items/" + item
             patchdata_files[item_path] = hash
 
         gamemode_manifest['files'] = gamemode_files
@@ -55,6 +55,7 @@ def load_patchdata(patachdata_dir) -> Dict:
         patchdata_files[gamemode_manifest_path] = get_file_hash(gamemode_manifest_path)
     
     return patchdata_files
+
 
 def load_asset_type(asset_type_dir) -> Dict:
     files_dict = {}
@@ -69,6 +70,7 @@ def load_asset_type(asset_type_dir) -> Dict:
             files_dict[file_path] = hash
 
     return files_dict
+
 
 def get_visible_subdir_names(file_path: str) -> str:
     return [f for f in os.listdir(file_path) if os.path.isdir(os.path.join(file_path, f)) and not f.startswith('.')]
