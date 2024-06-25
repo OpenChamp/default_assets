@@ -26,25 +26,21 @@ def load_patchdata(patachdata_dir) -> Dict:
         gamemode_files = {}
 
         gamemode_dir = os.path.join(patachdata_dir, gamemode)
-        characters_dir = os.path.join(gamemode_dir, 'characters')
-        items_dir = os.path.join(gamemode_dir, 'items')
 
-        characters = [f for f in os.listdir(characters_dir) if not f.startswith('.') and not f.endswith('.import')]
-        items = [f for f in os.listdir(items_dir) if not f.startswith('.') and not f.endswith('.import')]
+        data_groups = ['characters', 'items', 'map']
+        for data_group in data_groups:
+            group_dir = os.path.join(gamemode_dir, data_group)
+            if not os.path.exists(group_dir):
+                continue
+            
+            files = [f for f in os.listdir(group_dir) if not f.startswith('.') and not f.endswith('.import')]
 
-        for character in characters:
-            character_path = os.path.join(characters_dir, character)
+            for file in files:
+                file_path = os.path.join(group_dir, file)
 
-            hash = get_file_hash(character_path)
-            gamemode_files[hash] = "characters/" + character
-            patchdata_files[character_path] = hash
-
-        for item in items:
-            item_path = os.path.join(items_dir, item)
-
-            hash = get_file_hash(item_path)
-            gamemode_files[hash] = "items/" + item
-            patchdata_files[item_path] = hash
+                hash = get_file_hash(file_path)
+                gamemode_files[hash] = data_group + "/" + file
+                patchdata_files[file_path] = hash
 
         gamemode_manifest['files'] = gamemode_files
 
