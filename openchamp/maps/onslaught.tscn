@@ -1,27 +1,51 @@
-[gd_scene load_steps=7 format=3 uid="uid://beq64pi0wb447"]
+[gd_scene load_steps=12 format=3 uid="uid://beq64pi0wb447"]
 
 [ext_resource type="PackedScene" path="res://scenes/environment/bush.tscn" id="1_58sg1"]
+[ext_resource type="Shader" path="res://assets/shaders/grass.gdshader" id="1_ucm86"]
 
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_8va61"]
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_y3d73"]
 
-[sub_resource type="Sky" id="Sky_w164l"]
-sky_material = SubResource("PhysicalSkyMaterial_8va61")
+[sub_resource type="Sky" id="Sky_v1kgr"]
+sky_material = SubResource("PhysicalSkyMaterial_y3d73")
 
-[sub_resource type="Environment" id="Environment_fspyl"]
+[sub_resource type="Environment" id="Environment_c0jqn"]
 background_mode = 2
-sky = SubResource("Sky_w164l")
+sky = SubResource("Sky_v1kgr")
 fog_sky_affect = 0.025
 adjustment_brightness = 0.01
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_l0fjp"]
-resource_local_to_scene = true
-radius = 250.0
+[sub_resource type="NavigationMesh" id="NavigationMesh_bwmft"]
+cell_size = 0.01
+cell_height = 0.01
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_scp43"]
 resource_local_to_scene = true
-top_radius = 250.0
-bottom_radius = 250.0
+top_radius = 125.0
+bottom_radius = 125.0
+height = 0.5
 rings = 1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qyg7f"]
+height = 0.5
+radius = 125.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6hyob"]
+render_priority = 0
+shader = ExtResource("1_ucm86")
+shader_parameter/wind_speed = 0.2
+shader_parameter/wind_strength = 2.0
+shader_parameter/wind_texture_tile_size = 20.0
+shader_parameter/wind_vertical_strength = 0.3
+shader_parameter/wind_horizontal_direction = Vector2(1, 0.5)
+shader_parameter/character_position = null
+shader_parameter/character_radius = 3.0
+shader_parameter/character_push_strength = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kc431"]
+material = SubResource("ShaderMaterial_6hyob")
+
+[sub_resource type="MultiMesh" id="MultiMesh_xa846"]
+mesh = SubResource("PlaneMesh_kc431")
 
 [node name="Node" type="Node"]
 
@@ -31,26 +55,24 @@ light_energy = 0.95
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_fspyl")
+environment = SubResource("Environment_c0jqn")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="World" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_bwmft")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("CylinderShape3D_l0fjp")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("CylinderMesh_scp43")
+skeleton = NodePath("")
 
-[node name="Champions" type="Node" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="World/MeshInstance3D" groups=["Ground"]]
 
-[node name="Abilities" type="Node" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/MeshInstance3D/StaticBody3D"]
+shape = SubResource("CylinderShape3D_qyg7f")
 
-[node name="Minions" type="Node" parent="."]
-
-[node name="ChampionSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("res://champions/dummy.tscn")
-spawn_path = NodePath("../Champions")
-spawn_limit = 65
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0324036, 0)
+multimesh = SubResource("MultiMesh_xa846")
 
 [node name="Bush" parent="." instance=ExtResource("1_58sg1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42648, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.28957, 0, 2.35319)
