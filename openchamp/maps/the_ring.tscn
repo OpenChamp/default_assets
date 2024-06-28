@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://bfs3misttt2ys"]
+[gd_scene load_steps=12 format=3 uid="uid://bfs3misttt2ys"]
 
-[ext_resource type="Script" path="res://classes/map.gd" id="1_jqejy"]
 [ext_resource type="Shader" path="res://assets/shaders/grass.gdshader" id="2_dvf31"]
 [ext_resource type="PackedScene" path="res://scenes/environment/bush.tscn" id="3_iyd4x"]
 
@@ -48,7 +47,6 @@ material = SubResource("ShaderMaterial_0yftq")
 mesh = SubResource("PlaneMesh_emuw7")
 
 [node name="TheRing" type="Node" groups=["Map"]]
-script = ExtResource("1_jqejy")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.777267, 0.629171, 0, -0.629171, -0.777267, 0, 15.2809, 3.21383)
@@ -75,3 +73,9 @@ multimesh = SubResource("MultiMesh_8irof")
 
 [node name="Bush" parent="." instance=ExtResource("3_iyd4x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="player_spawn_1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="player_spawn_2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)

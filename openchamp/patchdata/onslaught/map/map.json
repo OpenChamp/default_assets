@@ -20,7 +20,7 @@
                 "team": 1,
                 "name": "player_spawn",
                 "position": {
-                    "x": 100,
+                    "x": 50,
                     "y": 0,
                     "z": 0
                 },
