@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://boqnmwsgsmeuc"]
+
+[ext_resource type="PackedScene" path="res://champions/champion.tscn" id="1_2gk3s"]
+[ext_resource type="Material" path="material://openchamp:wood" id="3_ykon6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlblt"]
+albedo_color = Color(1, 0.8, 0.654902, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_rtig3"]
+material = SubResource("StandardMaterial3D_qlblt")
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwhfe"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ivnwf"]
+material = SubResource("StandardMaterial3D_qwhfe")
+radius = 0.01
+height = 0.02
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wn1ej"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cdm5e"]
+height = 0.15
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cf4cx"]
+top_radius = 0.1
+bottom_radius = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngp1a"]
+transparency = 1
+albedo_color = Color(0.227451, 0.227451, 0.227451, 0.513726)
+
+[sub_resource type="BoxMesh" id="BoxMesh_22uf2"]
+material = SubResource("StandardMaterial3D_ngp1a")
+size = Vector3(0.745, 1, 0.27)
+subdivide_width = 2
+subdivide_height = 2
+
+[node name="Dummy" instance=ExtResource("1_2gk3s")]
+
+[node name="Head" type="MeshInstance3D" parent="Body" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("SphereMesh_rtig3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Body/Head" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0826644, 0.0541086, 0.240349)
+mesh = SubResource("SphereMesh_ivnwf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Body/Head" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06878, 0.0541089, 0.239883)
+mesh = SubResource("SphereMesh_ivnwf")
+
+[node name="Arms" type="MeshInstance3D" parent="Body" index="1"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 1.51689, 0)
+material_override = ExtResource("3_ykon6")
+mesh = SubResource("CylinderMesh_wn1ej")
+
+[node name="Foot" type="MeshInstance3D" parent="Body" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0751479, 0)
+material_override = ExtResource("3_ykon6")
+mesh = SubResource("CylinderMesh_cdm5e")
+
+[node name="Pole" type="MeshInstance3D" parent="Body" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("3_ykon6")
+mesh = SubResource("CylinderMesh_cf4cx")
+
+[node name="Torso" type="MeshInstance3D" parent="Body" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23422, 0)
+mesh = SubResource("BoxMesh_22uf2")
+
+[node name="StateMachine" parent="." index="8" node_paths=PackedStringArray("initial_state")]
+initial_state = NodePath("Idle")
