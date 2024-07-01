@@ -66,6 +66,12 @@ Note: The filecontent of these files don't get loaded automatically.
 However on launch the file content will be put in the patchadat cache.
 This may reduce the network traffic the servers have to deal with drastically.
 
+Note2: The manifest files are not part of the repository.
+Use the following command to generate all the manifest json files:
+```
+python manifests.py
+```
+
 ### textures
 
 The textures should comply to the following structure:
