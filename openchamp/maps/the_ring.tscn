@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bfs3misttt2ys"]
 
-[ext_resource type="Shader" path="res://assets/shaders/grass.gdshader" id="2_dvf31"]
+[ext_resource type="Shader" path="shader://openchamp:environment/grass" id="2_dvf31"]
 [ext_resource type="PackedScene" path="res://scenes/environment/bush.tscn" id="3_iyd4x"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_glou8"]
