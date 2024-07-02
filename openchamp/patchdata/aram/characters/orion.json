@@ -32,7 +32,7 @@
             "attack_crit_chance": 0.0,
             "attack_crit_damage": 0.1,
 
-            "movement_speed": 100
+            "movement_speed": 200
         },
         "stat_growth":{
             "health_max": 100,

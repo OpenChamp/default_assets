@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://beq64pi0wb447"]
 
 [ext_resource type="PackedScene" path="res://scenes/environment/bush.tscn" id="1_58sg1"]
-[ext_resource type="Texture2D" uid="uid://boqx5wxg0d6yn" path="res://default_assets/openchamp/textures/environment/misc/dirt.png" id="1_hjqfr"]
+[ext_resource type="Texture2D" path="texture://openchamp:environment/misc/dirt" id="1_hjqfr"]
 [ext_resource type="Shader" path="shader://openchamp:environment/grass" id="1_ucm86"]
-[ext_resource type="Texture2D" uid="uid://cdgd4pify3doy" path="res://default_assets/openchamp/textures/environment/misc/dirt_nrm.png" id="2_tfqdg"]
+[ext_resource type="Texture2D" path="texture://openchamp:environment/misc/dirt_nrm" id="2_tfqdg"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_y3d73"]
 
@@ -17,8 +17,6 @@ fog_sky_affect = 0.025
 adjustment_brightness = 0.01
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_bwmft"]
-cell_size = 0.01
-cell_height = 0.01
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_scp43"]
 resource_local_to_scene = true
