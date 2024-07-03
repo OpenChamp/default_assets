@@ -27,7 +27,7 @@ def load_patchdata(patachdata_dir) -> Dict:
 
         gamemode_dir = os.path.join(patachdata_dir, gamemode)
 
-        data_groups = ['characters', 'items', 'map']
+        data_groups = ['characters', 'units', 'items', 'map', 'misc']
         for data_group in data_groups:
             group_dir = os.path.join(gamemode_dir, data_group)
             if not os.path.exists(group_dir):

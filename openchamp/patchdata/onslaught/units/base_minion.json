@@ -1,0 +1,57 @@
+{
+    "type": "unit",
+    "format_version": "1",
+    "data": {
+        "id": "openchamp:base_minion",
+        "model": "openchamp:base_minion",
+        "aggro_type":"agressive",
+        "aggro_distance": 300.0,
+        "deaggro_distance": 1000.0,
+        "team": -1,
+        "damage_type": "physical",
+        "stat_graph": {
+            "ability_damage": 7,
+            "ability_defense": 3,
+            "utility": 2,
+            "mobility": 4,
+            "basic_defense": 2,
+            "basic_damage": 8
+        },
+        "base_stats": {
+            "health_max": 640,
+            "health_regen": 3.5,
+
+            "mana_max": 280,
+            "mana_regen": 7,
+            
+            "armor": 26,
+            "magic_resist": 30,
+
+            "attack_range": 3.0,
+            "attack_damage": 60,
+            "attack_speed": 0.75,
+            "attack_crit_chance": 0.0,
+            "attack_crit_damage": 0.1,
+
+            "movement_speed": 100
+        },
+        "stat_growth":{
+            "health_max": 100,
+            "health_regen": 0.55,
+
+            "mana_max": 35,
+            "mana_regen": 0.6,
+            
+            "armor": 5,
+            "magic_resist": 2,
+
+            "attack_range": 3.0,
+            "attack_damage": 5,
+            "attack_speed": 0.1,
+            "attack_crit_chance": 0.0,
+            "attack_crit_damage": 0.0,
+
+            "movement_speed": 5
+        }
+    }
+}
