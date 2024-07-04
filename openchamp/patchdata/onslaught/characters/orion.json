@@ -3,7 +3,6 @@
     "format_version": "1",
     "data": {
         "id": "openchamp:orion",
-        "icon": "openchamp:characters/orion/icon",
         "tags": [
             "openchamp:assassin",
             "openchamp:ranged_dps"
