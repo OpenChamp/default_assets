@@ -73,6 +73,3 @@ mesh = SubResource("CylinderMesh_cf4cx")
 [node name="Torso" type="MeshInstance3D" parent="Body" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23422, 0)
 mesh = SubResource("BoxMesh_22uf2")
-
-[node name="StateMachine" parent="." index="8" node_paths=PackedStringArray("initial_state")]
-initial_state = NodePath("Idle")
