@@ -42,8 +42,11 @@
                 },
                 "spawn_behaviour":{
                     "unit_type": "openchamp:base_minion",
-                    "initial_cooldown": 30,
-                    "wave_interval": 60,
+                    "unit_level": 1,
+                    "unit_level_growth": 1,
+                    "unit_level_growth_time": 0,
+                    "initial_cooldown": 10,
+                    "wave_interval": 10,
                     "wave_size": 1,
                     "wave_growth": 1,
                     "require_clear": true
