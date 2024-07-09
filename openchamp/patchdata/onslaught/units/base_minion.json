@@ -21,8 +21,22 @@
             "basic_defense": 2,
             "basic_damage": 8
         },
+        "attack_projectile": {
+            "model": "openchamp:particles/arrow",
+            "model_scale": {
+                "x": 0.3,
+                "y": 1.0,
+                "z": 0.3 
+            },
+            "model_rotation": {
+                "x": 90.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "speed": 80.0
+        },
         "base_stats": {
-            "health_max": 640,
+            "health_max": 100,
             "health_regen": 3.5,
 
             "mana_max": 280,
@@ -37,10 +51,10 @@
             "attack_crit_chance": 0.0,
             "attack_crit_damage": 0.1,
 
-            "movement_speed": 100
+            "movement_speed": 50
         },
         "stat_growth":{
-            "health_max": 100,
+            "health_max": 50,
             "health_regen": 0.55,
 
             "mana_max": 35,
