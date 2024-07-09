@@ -4,7 +4,7 @@
     "data": {
         "id": "openchamp:base_minion",
         "model": "openchamp:base_minion",
-        "aggro_type":"agressive",
+        "aggro_type":"aggressive",
         "aggro_distance": 300.0,
         "deaggro_distance": 1000.0,
         "team": -1,
