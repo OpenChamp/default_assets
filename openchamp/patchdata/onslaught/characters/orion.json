@@ -30,12 +30,18 @@
                 "z": 0.3 
             },
             "model_rotation": {
-                "x": 90.0,
+                "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
             },
-            "speed": 80.0
+            "spawn_offset": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
+            },
+            "speed": 20.0
         },
+        "windup_fraction": 0.1,
         "base_stats": {
             "health_max": 640,
             "health_regen": 3.5,
@@ -46,7 +52,7 @@
             "armor": 26,
             "magic_resist": 30,
 
-            "attack_range": 3.0,
+            "attack_range": 20.0,
             "attack_damage": 60,
             "attack_speed": 0.75,
             "attack_crit_chance": 0.0,
