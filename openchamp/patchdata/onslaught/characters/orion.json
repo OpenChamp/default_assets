@@ -58,7 +58,9 @@
             "attack_crit_chance": 0.0,
             "attack_crit_damage": 0.1,
 
-            "movement_speed": 500
+            "movement_speed": 500,
+
+            "omnivamp": 0.10
         },
         "stat_growth":{
             "health_max": 100,
@@ -76,7 +78,9 @@
             "attack_crit_chance": 0.0,
             "attack_crit_damage": 0.0,
 
-            "movement_speed": 0
+            "movement_speed": 0,
+
+            "omnivamp": 0.05
         }
     }
 }
