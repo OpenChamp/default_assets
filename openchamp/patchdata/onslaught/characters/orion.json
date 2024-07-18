@@ -39,7 +39,7 @@
                 "y": 1.0,
                 "z": 0.0
             },
-            "speed": 20.0
+            "speed": 30.0
         },
         "windup_fraction": 0.1,
         "base_stats": {
@@ -58,7 +58,7 @@
             "attack_crit_chance": 0.0,
             "attack_crit_damage": 0.1,
 
-            "movement_speed": 200
+            "movement_speed": 500
         },
         "stat_growth":{
             "health_max": 100,

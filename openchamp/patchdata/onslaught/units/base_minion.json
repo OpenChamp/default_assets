@@ -51,13 +51,13 @@
             "armor": 26,
             "magic_resist": 30,
 
-            "attack_range": 5.0,
+            "attack_range": 6.0,
             "attack_damage": 60,
             "attack_speed": 0.75,
             "attack_crit_chance": 0.0,
             "attack_crit_damage": 0.1,
 
-            "movement_speed": 50
+            "movement_speed": 250
         },
         "stat_growth":{
             "health_max": 50,
@@ -75,7 +75,7 @@
             "attack_crit_chance": 0.0,
             "attack_crit_damage": 0.0,
 
-            "movement_speed": 5
+            "movement_speed": 10
         }
     }
 }
