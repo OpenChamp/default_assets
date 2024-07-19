@@ -3,7 +3,7 @@
     "format_version": "1",
     "data": {
         "id": "openchamp:empire_sword",
-        "texture": "openchamp:item/empire_sword.png",
+        "texture": "openchamp:items/standard_empire_sword",
         "recipe": {
             "gold_cost": 500,
             "components": [
