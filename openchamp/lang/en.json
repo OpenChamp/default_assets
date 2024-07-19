@@ -18,5 +18,63 @@
     "STARTUP:ATTEMPTS": "Attempts: %d",
     "STARTUP:HOST_GAME": "Host game",
     "STARTUP:RECONNECT": "Reconnect",
-    "STARTUP:EXIT": "Exit"
+    "STARTUP:EXIT": "Exit",
+
+
+    "STAT:health_max:NAME": "Health",
+    "STAT:health_max:DESCRIPTION": "Health points",
+    "STAT:health_regen:NAME": "Health Regen",
+    "STAT:health_regen:DESCRIPTION": "Health regenerated per 5 seconds",
+
+    "STAT:mana_max:NAME": "Mana",
+    "STAT:mana_max:DESCRIPTION": "Mana points",
+    "STAT:mana_regen:NAME": "Mana Regen",
+    "STAT:mana_regen:DESCRIPTION": "Mana regenerated per 5 seconds",
+
+    "STAT:armor:NAME": "Armor",
+    "STAT:armor:DESCRIPTION": "Pyhsical damage reduction. Every 100 armor makes you take the same amount of damage one more time.",
+    "STAT:magic_resist:NAME": "Magic Resist",
+    "STAT:magic_resist:DESCRIPTION": "Magic damage reduction. Every 100 magic resist makes you take the same amount of damage one more time.",
+
+    "STAT:armor_pen_flat:NAME": "Armor Penetration (Flat)",
+    "STAT:armor_pen_flat:DESCRIPTION": "Ignores a flat amount of armor (applied after percentage armor penetration)",
+    "STAT:armor_pen_percent:NAME": "Armor Penetration (%)",
+    "STAT:armor_pen_percent:DESCRIPTION": "Ignores a percentage of armor",
+
+    "STAT:magic_pen_flat:NAME": "Magic Penetration (Flat)",
+    "STAT:magic_pen_flat:DESCRIPTION": "Ignores a flat amount of magic resist (applied after percentage magic penetration)",
+    "STAT:magic_pen_percent:NAME": "Magic Penetration (%)",
+    "STAT:magic_pen_percent:DESCRIPTION": "Ignores a percentage of magic resist",
+
+    "STAT:attack_damage:NAME": "Attack Damage",
+    "STAT:attack_damage:DESCRIPTION": "Physical damage dealt by basic attacks",
+    "STAT:attack_speed:NAME": "Attack Speed",
+    "STAT:attack_speed:DESCRIPTION": "Basic attack_speed. Every 100 attack speed is 1 attack per second.",
+    "STAT:attack_range:NAME": "Attack Range",
+    "STAT:attack_range:DESCRIPTION": "Range of basic attacks in centimeters",
+    "STAT:attack_crit_chance:NAME": "Critical Chance",
+    "STAT:attack_crit_chance:DESCRIPTION": "Chance to deal extra damage with basic attacks",
+    "STAT:attack_crit_damage:NAME": "Critical Damage",
+    "STAT:attack_crit_damage:DESCRIPTION": "Extra damage dealt with critical hits in percent",
+
+    "STAT:omnivamp:NAME": "Omnivamp",
+    "STAT:omnivamp:DESCRIPTION": "Percentage of post mitigation damage dealt that is returned as health. This gets added to physical, magic and true vamp.",
+    "STAT:physical_vamp:NAME": "Physical Vamp",
+    "STAT:physical_vamp:DESCRIPTION": "Percentage of post mitigation physical damage dealt that is returned as health",
+    "STAT:magic_vamp:NAME": "Magic Vamp",
+    "STAT:magic_vamp:DESCRIPTION": "Percentage of post mitigation magic damage dealt that is returned as health",
+    "STAT:true_vamp:NAME": "True Vamp",
+    "STAT:true_vamp:DESCRIPTION": "Percentage of post mitigation true damage dealt that is returned as health",
+
+    "STAT:movement_speed:NAME": "Movement Speed",
+    "STAT:movement_speed:DESCRIPTION": "Speed of the character in centimeters per second",
+
+
+    "ITEM:COST_LABEL": "Total cost: %d",
+
+    "ITEM:openchamp:rusty_sword:NAME": "Rusty Sword",
+    "ITEM:openchamp:rusty_sword:LORE": "An old rusty sword nothing good but better than no weapon at all.\nNo one knows what it's past is, one thing is clear it's definitely past its prime.",
+    
+    "ITEM:openchamp:empire_sword:NAME": "Standard sword of the Empire",
+    "ITEM:openchamp:empire_sword:LORE": "Each soldier of the empire held one of these at one point in their life.\nIt's a good sword but nothing special."
 }
