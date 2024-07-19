@@ -43,7 +43,7 @@
         "windup_fraction": 0.3,
         "base_stats": {
             "health_max": 100,
-            "health_regen": 3.5,
+            "health_regen": 20,
 
             "mana_max": 280,
             "mana_regen": 7,
@@ -51,11 +51,11 @@
             "armor": 26,
             "magic_resist": 30,
 
-            "attack_range": 6.0,
+            "attack_range": 500,
             "attack_damage": 60,
-            "attack_speed": 0.75,
-            "attack_crit_chance": 0.0,
-            "attack_crit_damage": 0.1,
+            "attack_speed": 75,
+            "attack_crit_chance": 0,
+            "attack_crit_damage": 10,
 
             "movement_speed": 250
         },
@@ -64,16 +64,16 @@
             "health_regen": 0.55,
 
             "mana_max": 35,
-            "mana_regen": 0.6,
+            "mana_regen": 5,
             
             "armor": 5,
             "magic_resist": 2,
 
-            "attack_range": 0.5,
+            "attack_range": 50,
             "attack_damage": 5,
-            "attack_speed": 0.1,
-            "attack_crit_chance": 0.0,
-            "attack_crit_damage": 0.0,
+            "attack_speed": 10,
+            "attack_crit_chance": 0,
+            "attack_crit_damage": 0,
 
             "movement_speed": 10
         }
