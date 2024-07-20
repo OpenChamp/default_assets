@@ -17,10 +17,10 @@
             "basic_damage": 8
         },
         "base_stats": {
-            "health_max": 640,
+            "health": 640,
             "health_regen": 3.5,
 
-            "mana_max": 280,
+            "mana": 280,
             "mana_regen": 7,
             
             "armor": 26,
@@ -35,10 +35,10 @@
             "movement_speed": 200
         },
         "stat_growth":{
-            "health_max": 100,
+            "health": 100,
             "health_regen": 0.55,
 
-            "mana_max": 35,
+            "mana": 35,
             "mana_regen": 0.6,
             
             "armor": 5,

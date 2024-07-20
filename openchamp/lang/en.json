@@ -21,13 +21,13 @@
     "STARTUP:EXIT": "Exit",
 
 
-    "STAT:health_max:NAME": "Health",
-    "STAT:health_max:DESCRIPTION": "Health points",
+    "STAT:health:NAME": "Health",
+    "STAT:health:DESCRIPTION": "Health points",
     "STAT:health_regen:NAME": "Health Regen",
     "STAT:health_regen:DESCRIPTION": "Health regenerated per 5 seconds",
 
-    "STAT:mana_max:NAME": "Mana",
-    "STAT:mana_max:DESCRIPTION": "Mana points",
+    "STAT:mana:NAME": "Mana",
+    "STAT:mana:DESCRIPTION": "Mana points",
     "STAT:mana_regen:NAME": "Mana Regen",
     "STAT:mana_regen:DESCRIPTION": "Mana regenerated per 5 seconds",
 

@@ -43,10 +43,10 @@
         },
         "windup_fraction": 0.1,
         "base_stats": {
-            "health_max": 640,
-            "health_regen": 20,
+            "health": 600,
+            "health_regen": 10,
 
-            "mana_max": 280,
+            "mana": 280,
             "mana_regen": 35,
             
             "armor": 26,
@@ -66,16 +66,16 @@
 
             "movement_speed": 500,
 
-            "omnivamp": 10,
+            "omnivamp": 5,
             "physical_vamp": 0,
             "magic_vamp": 0,
             "true_vamp": 0
         },
         "stat_growth":{
-            "health_max": 100,
+            "health": 100,
             "health_regen": 5,
 
-            "mana_max": 35,
+            "mana": 35,
             "mana_regen": 5,
             
             "armor": 5,
@@ -90,12 +90,12 @@
             "attack_range": 25,
             "attack_damage": 5,
             "attack_speed": 10,
-            "attack_crit_chance": 0.0,
-            "attack_crit_damage": 0.0,
+            "attack_crit_chance": 0,
+            "attack_crit_damage": 0,
 
             "movement_speed": 0,
 
-            "omnivamp": 5,
+            "omnivamp": 1,
             "physical_vamp": 0,
             "magic_vamp": 0,
             "true_vamp": 0
