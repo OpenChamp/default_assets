@@ -20,6 +20,10 @@
     "STARTUP:RECONNECT": "Reconnect",
     "STARTUP:EXIT": "Exit",
 
+    "UNIT_TAG:openchamp:assassin:NAME": "Assassin",
+    "UNIT_TAG:openchamp:assassin:DESCRIPTION": "Assassins are fragile champions that look to kill enemy champions quickly before they have a chance to react.",
+    "UNIT_TAG:openchamp:ranged_dps:NAME": "Ranged DPS",
+    "UNIT_TAG:openchamp:ranged_dps:DESCRIPTION": "Ranged DPS champions are fragile champions that deal continuos damage from a distance.",
 
     "STAT:health:NAME": "Health",
     "STAT:health:DESCRIPTION": "Health points",
@@ -56,6 +60,11 @@
     "STAT:attack_crit_chance:DESCRIPTION": "Chance to deal extra damage with basic attacks",
     "STAT:attack_crit_damage:NAME": "Critical Damage",
     "STAT:attack_crit_damage:DESCRIPTION": "Extra damage dealt with critical hits in percent",
+
+    "STAT:ability_power:NAME": "Ability Power",
+    "STAT:ability_power:DESCRIPTION": "Power amplification of abilities",
+    "STAT:ability_haste:NAME": "Ability Haste",
+    "STAT:ability_haste:DESCRIPTION": "Cooldown reduction of abilities. Every 100 ability haste allows you to use abilities 1 more time in the same time.",
 
     "STAT:omnivamp:NAME": "Omnivamp",
     "STAT:omnivamp:DESCRIPTION": "Percentage of post mitigation damage dealt that is returned as health. This gets added to physical, magic and true vamp.",

@@ -4,6 +4,7 @@
     "data": {
         "id": "openchamp:base_minion",
         "model": "openchamp:base_minion",
+        "is_character": false,
         "aggro_type":"aggressive",
         "aggro_distance": 300.0,
         "deaggro_distance": 1000.0,
@@ -12,7 +13,6 @@
         "gold_per_second": 0.0,
         "exp_per_second": 0.0,
         "team": -1,
-        "damage_type": "physical",
         "stat_graph": {
             "ability_damage": 7,
             "ability_defense": 3,
@@ -38,7 +38,8 @@
                 "y": 1.0,
                 "z": 0.0
             },
-            "speed": 20.0
+            "speed": 20.0,
+            "damage_type": "physical"
         },
         "windup_fraction": 0.3,
         "base_stats": {

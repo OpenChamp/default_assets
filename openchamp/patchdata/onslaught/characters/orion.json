@@ -1,8 +1,9 @@
 {
-    "type": "character",
+    "type": "unit",
     "format_version": "1",
     "data": {
         "id": "openchamp:orion",
+        "is_character": true,
         "tags": [
             "openchamp:assassin",
             "openchamp:ranged_dps"
@@ -13,7 +14,6 @@
         "exp_per_second": 0.0,
         "spawn_gold": 500,
         "spawn_exp": 0,
-        "damage_type": "physical",
         "stat_graph": {
             "ability_damage": 7,
             "ability_defense": 3,
@@ -39,7 +39,8 @@
                 "y": 1.0,
                 "z": 0.0
             },
-            "speed": 30.0
+            "speed": 30.0,
+            "damage_type": "physical"
         },
         "windup_fraction": 0.1,
         "base_stats": {
@@ -64,12 +65,15 @@
             "attack_crit_chance": 0,
             "attack_crit_damage": 10,
 
-            "movement_speed": 500,
+            "ability_power": 0,
+            "ability_haste": 0,
 
             "omnivamp": 5,
             "physical_vamp": 0,
             "magic_vamp": 0,
-            "true_vamp": 0
+            "true_vamp": 0,
+
+            "movement_speed": 500
         },
         "stat_growth":{
             "health": 100,
@@ -93,12 +97,15 @@
             "attack_crit_chance": 0,
             "attack_crit_damage": 0,
 
-            "movement_speed": 0,
+            "ability_power": 0,
+            "ability_haste": 0,
 
             "omnivamp": 1,
             "physical_vamp": 0,
             "magic_vamp": 0,
-            "true_vamp": 0
+            "true_vamp": 0,
+
+            "movement_speed": 0
         }
     }
 }
