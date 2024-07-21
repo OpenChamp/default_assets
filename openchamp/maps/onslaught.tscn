@@ -29,7 +29,7 @@ rings = 1
 albedo_texture = ExtResource("1_hjqfr")
 normal_enabled = true
 normal_texture = ExtResource("2_tfqdg")
-uv1_scale = Vector3(200, 200, 200)
+uv1_scale = Vector3(100, 100, 100)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_qyg7f"]
 height = 0.001
