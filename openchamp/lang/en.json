@@ -81,6 +81,8 @@
 
     "ITEM:COST_LABEL": "Total cost: %d",
     "ITEM:NOT_ENOUGH_GOLD": "You need %d more gold to purchase \"%s\".",
+    "ITEM:NOT_ENOUGH_SLOTS": "Not enough item slots to purchase item \"%s\".",
+    "ITEM:NOT_ENOUGH_ACTIVE_SLOTS": "Not enough active item slots to purchase item \"%s\".",
 
     "ITEM:openchamp:rusty_sword:NAME": "Rusty Sword",
     "ITEM:openchamp:rusty_sword:LORE": "An old rusty sword nothing good but better than no weapon at all.\nNo one knows what it's past is, one thing is clear it's definitely past its prime.",

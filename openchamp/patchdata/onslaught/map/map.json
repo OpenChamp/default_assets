@@ -8,6 +8,7 @@
         "require_all_players": false,
         "join_wait_time": 10,
         "allow_join_in_progress": true,
+        "player_passive_item_slots": 4,
         "end_conditions": [
             {
                 "type": "team_elimination",
