@@ -13,7 +13,7 @@
         },
         "stats": {
             "attack_damage": 40,
-            "attack_speed": 5
+            "attack_speed": 15
         }
     }
 }

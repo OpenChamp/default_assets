@@ -8,7 +8,7 @@
         "aggro_type":"aggressive",
         "aggro_distance": 300.0,
         "deaggro_distance": 1000.0,
-        "kill_gold": 40,
+        "kill_gold": 150,
         "kill_exp": 75,
         "gold_per_second": 0.0,
         "exp_per_second": 0.0,
