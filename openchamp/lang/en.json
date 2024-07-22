@@ -84,9 +84,38 @@
     "ITEM:NOT_ENOUGH_SLOTS": "Not enough item slots to purchase item \"%s\".",
     "ITEM:NOT_ENOUGH_ACTIVE_SLOTS": "Not enough active item slots to purchase item \"%s\".",
 
+
     "ITEM:openchamp:rusty_sword:NAME": "Rusty Sword",
     "ITEM:openchamp:rusty_sword:LORE": "An old rusty sword nothing good but better than no weapon at all.\nNo one knows what it's past is, one thing is clear it's definitely past its prime.",
     
+    "ITEM:openchamp:old_bow:NAME": "Old Bow",
+    "ITEM:openchamp:old_bow:LORE": "An old bow that has seen better days.",
+
+    "ITEM:openchamp:metal_padded_leather_armor:NAME": "Metal Padded Leather Armor",
+    "ITEM:openchamp:metal_padded_leather_armor:LORE": "A piece of leather armor with metal padding.",
+
+    "ITEM:openchamp:silk_toga:NAME": "Silk Toga",
+    "ITEM:openchamp:silk_toga:LORE": "A toga made of silk enchanted to give the wearer some magic resistance.",
+
+    "ITEM:openchamp:small_blue_rune:NAME": "Small Blue Rune",
+    "ITEM:openchamp:small_blue_rune:LORE": "A small blue rune that gives the wearer more mana.",
+
+    "ITEM:openchamp:small_red_rune:NAME": "Small Red Rune",
+    "ITEM:openchamp:small_red_rune:LORE": "A small red rune that gives the wearer more health.",
+
+    "ITEM:openchamp:mysterious_blue_orb:NAME": "Mysterious Blue Orb",
+    "ITEM:openchamp:mysterious_blue_orb:LORE": "A mysterious blue orb that boosts the arcane regeneration powers of the wearer.",
+
+    "ITEM:openchamp:common_strawberry:NAME": "Common Strawberry",
+    "ITEM:openchamp:common_strawberry:LORE": "What is this with these strawberries?\nWhy does eating them increate my life force?",
+
+
     "ITEM:openchamp:empire_sword:NAME": "Standard sword of the Empire",
-    "ITEM:openchamp:empire_sword:LORE": "Each soldier of the empire held one of these at one point in their life.\nIt's a good sword but nothing special."
+    "ITEM:openchamp:empire_sword:LORE": "Each soldier of the empire held one of these at one point in their life.\nIt's a good sword but nothing special.",
+
+    "ITEM:openchamp:blueberry_runic_jelly:NAME": "Blueberry Runic Jelly",
+    "ITEM:openchamp:blueberry_runic_jelly:LORE": "A jelly made of a common strawberry enchanted with a mysterious blue orb.\nIt gives the wearer health and mana regeneration.",
+
+    "ITEM:openchamp:silky_glove:NAME": "Silky Glove",
+    "ITEM:openchamp:silky_glove:LORE": "An enchanted silk glove protects the wearer from magic and helps them attack faster."
 }
