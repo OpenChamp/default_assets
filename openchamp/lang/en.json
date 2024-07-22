@@ -79,6 +79,16 @@
     "STAT:movement_speed:DESCRIPTION": "Speed of the character in centimeters per second",
 
 
+    "DAMAGE_TYPE:physical:NAME": "Physical",
+    "DAMAGE_TYPE:magic:NAME": "Magic",
+    "DAMAGE_TYPE:true:NAME": "True",
+
+    "EFFECT:OnHitDamageEffect:flat": "On Hit:\n Deal %d %s extra damage",
+    "EFFECT:OnHitDamageEffect:scaled": "On Hit:\n Deal %s %s extra damage",
+
+    "ACTION_EFFECT:openchamp:hidden_kunai_onhit" : "Hidden Kunais",
+
+
     "ITEM:COST_LABEL": "Total cost: %d",
     "ITEM:NOT_ENOUGH_GOLD": "You need %d more gold to purchase \"%s\".",
     "ITEM:NOT_ENOUGH_SLOTS": "Not enough item slots to purchase item \"%s\".",
@@ -117,5 +127,8 @@
     "ITEM:openchamp:blueberry_runic_jelly:LORE": "A jelly made of a common strawberry enchanted with a mysterious blue orb.\nIt gives the wearer health and mana regeneration.",
 
     "ITEM:openchamp:silky_glove:NAME": "Silky Glove",
-    "ITEM:openchamp:silky_glove:LORE": "An enchanted silk glove protects the wearer from magic and helps them attack faster."
+    "ITEM:openchamp:silky_glove:LORE": "An enchanted silk glove protects the wearer from magic and helps them attack faster.",
+
+    "ITEM:openchamp:hidden_kunai:NAME": "Hidden Kunais",
+    "ITEM:openchamp:hidden_kunai:LORE": "A pair of kunais that deal extra damage on hit."
 }
