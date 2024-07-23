@@ -79,12 +79,25 @@
     "STAT:movement_speed:DESCRIPTION": "Speed of the character in centimeters per second",
 
 
+    "SCALING:STAT_SET:base": "Base",
+    "SCALING:STAT_SET:max": "Max",
+    "SCALING:STAT_SET:current": "Current",
+
+    "SCALING:ACTOR:caster": "Caster",
+    "SCALING:ACTOR:target": "Target",
+
+    "SCALING:BY_STAT": "%.3f %s %s %s",
+    "SCALING:BY_LEVEL": "%.3f %s Level",
+
+    "SCALING:VALUE_CALCULATION": "(%.3f = %.3f * %.3f)",
+
+
     "DAMAGE_TYPE:physical:NAME": "Physical",
     "DAMAGE_TYPE:magic:NAME": "Magic",
     "DAMAGE_TYPE:true:NAME": "True",
 
-    "EFFECT:OnHitDamageEffect:flat": "On Hit:\n Deal %d %s extra damage",
-    "EFFECT:OnHitDamageEffect:scaled": "On Hit:\n Deal %s %s extra damage",
+    "EFFECT:OnHitDamageEffect:flat": "On Hit:\n Deal '%d' extra '%s' damage",
+    "EFFECT:OnHitDamageEffect:scaled": "On Hit:\n Deal '%s' extra '%s' damage",
 
     "ACTION_EFFECT:openchamp:hidden_kunai_onhit" : "Hidden Kunais",
 
