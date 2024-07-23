@@ -12,7 +12,7 @@
         "kill_exp": 50,
         "gold_per_second": 1.0,
         "exp_per_second": 0.0,
-        "spawn_gold": 500,
+        "spawn_gold": 1500,
         "spawn_exp": 0,
         "stat_graph": {
             "ability_damage": 7,

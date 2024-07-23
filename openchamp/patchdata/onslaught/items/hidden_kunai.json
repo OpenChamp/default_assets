@@ -20,6 +20,7 @@
                 "display_id": "openchamp:hidden_kunai_onhit",
                 "is_exclusive": true,
                 "damage": 20,
+                "scaling": "10 + 0.01 t.max.hp",
                 "can_crit": false,
                 "damage_type": "true"
             }
