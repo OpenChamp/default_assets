@@ -17,9 +17,9 @@
     "STARTUP:ATTEMPTS": "reintentos: %d",
     "STARTUP:HOST_GAME": "crear partida",
     "STARTUP:RECONNECT": "reconectar",
-    "STARTUP:EXIT": "salir"
+    "STARTUP:EXIT": "salir",
 
-     "UNIT_TAG:openchamp:assassin:NAME": "Asesino",
+    "UNIT_TAG:openchamp:assassin:NAME": "Asesino",
     "UNIT_TAG:openchamp:assassin:DESCRIPTION": "Los asesinos son campeones fragiles que buscan asesinar a su enemigo antes que este reaccione.",
     "UNIT_TAG:openchamp:ranged_dps:NAME": "DPS de rango",
     "UNIT_TAG:openchamp:ranged_dps:DESCRIPTION": "Los dps de rango son campeones fragiles que hacen daño continuo a la distancia.",

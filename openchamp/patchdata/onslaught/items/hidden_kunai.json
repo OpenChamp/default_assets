@@ -19,7 +19,7 @@
                 "base_id": "OnHitDamageEffect",
                 "display_id": "openchamp:hidden_kunai_onhit",
                 "is_exclusive": true,
-                "damage": 10,
+                "damage": 20,
                 "can_crit": false,
                 "damage_type": "true"
             }
