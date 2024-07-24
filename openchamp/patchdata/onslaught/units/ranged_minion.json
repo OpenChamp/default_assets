@@ -2,8 +2,8 @@
     "type": "unit",
     "format_version": "1",
     "data": {
-        "id": "openchamp:base_minion",
-        "model": "openchamp:base_minion",
+        "id": "openchamp:ranged_minion",
+        "model": "openchamp:npc/ranged_minion",
         "is_character": false,
         "aggro_type":"aggressive",
         "aggro_distance": 300.0,
@@ -71,7 +71,7 @@
             "magic_resist": 2,
 
             "attack_range": 10,
-            "attack_damage": 10,
+            "attack_damage": 15,
             "attack_speed": 5,
             "attack_crit_chance": 5,
             "attack_crit_damage": 0,

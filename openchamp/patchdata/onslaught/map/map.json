@@ -42,13 +42,34 @@
                     "z": 0
                 },
                 "spawn_behaviour":{
-                    "unit_type": "openchamp:base_minion",
+                    "unit_type": "openchamp:ranged_minion",
                     "unit_level": 1,
                     "unit_level_growth": 1,
                     "unit_level_growth_time": 0,
                     "initial_cooldown": 10,
                     "wave_interval": 10,
                     "wave_size": 1,
+                    "wave_growth": 1,
+                    "require_clear": true
+                }
+            },
+            {
+                "type": "unit_spawn",
+                "team": -1,
+                "name": "minion_spawn_2",
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "spawn_behaviour":{
+                    "unit_type": "openchamp:melee_minion",
+                    "unit_level": 1,
+                    "unit_level_growth": 1,
+                    "unit_level_growth_time": 0,
+                    "initial_cooldown": 10,
+                    "wave_interval": 10,
+                    "wave_size": 2,
                     "wave_growth": 1,
                     "require_clear": true
                 }

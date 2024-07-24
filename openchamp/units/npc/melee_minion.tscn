@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://boqnmwsgsmeub"]
+
+[ext_resource type="PackedScene" path="res://scenes/unit_types/unit.tscn" id="1_2gk3s"]
+[ext_resource type="PackedScene" path="model://openchamp:npc/minion_melee" id="2_xwywq"]
+
+[node name="MeleeMinion" instance=ExtResource("1_2gk3s")]
+
+[node name="minion_melee" parent="Body" index="0" instance=ExtResource("2_xwywq")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
