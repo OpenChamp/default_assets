@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://boqnmwsgsmeuc"]
+[gd_scene load_steps=13 format=3 uid="uid://boqnmwsgsmeua"]
 
-[ext_resource type="PackedScene" path="res://scenes/unit_types/unit.tscn" id="1_2gk3s"]
+[ext_resource type="Script" path="res://scripts/unit_types/unit.gd" id="1_qclsc"]
 [ext_resource type="Material" path="material://openchamp:misc/wood" id="3_ykon6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlblt"]
@@ -41,35 +41,49 @@ size = Vector3(0.745, 1, 0.27)
 subdivide_width = 2
 subdivide_height = 2
 
-[node name="Dummy" instance=ExtResource("1_2gk3s")]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ig7uv"]
 
-[node name="Head" type="MeshInstance3D" parent="Body" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="Dummy" type="CharacterBody3D"]
+script = ExtResource("1_qclsc")
+
+[node name="Body" type="Node3D" parent="."]
+
+[node name="Head" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, 0)
 mesh = SubResource("SphereMesh_rtig3")
+skeleton = NodePath("../../Body")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Body/Head" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Body/Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0826644, 0.0541086, 0.240349)
 mesh = SubResource("SphereMesh_ivnwf")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Body/Head" index="1"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Body/Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06878, 0.0541089, 0.239883)
 mesh = SubResource("SphereMesh_ivnwf")
 
-[node name="Arms" type="MeshInstance3D" parent="Body" index="1"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 1.51689, 0)
+[node name="Arms" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 0, 1.51689, 0)
 material_override = ExtResource("3_ykon6")
 mesh = SubResource("CylinderMesh_wn1ej")
+skeleton = NodePath("../../Body")
 
-[node name="Foot" type="MeshInstance3D" parent="Body" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0751479, 0)
+[node name="Foot" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.0751479, 0)
 material_override = ExtResource("3_ykon6")
 mesh = SubResource("CylinderMesh_cdm5e")
+skeleton = NodePath("../../Body")
 
-[node name="Pole" type="MeshInstance3D" parent="Body" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="Pole" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0)
 material_override = ExtResource("3_ykon6")
 mesh = SubResource("CylinderMesh_cf4cx")
+skeleton = NodePath("../../Body")
 
-[node name="Torso" type="MeshInstance3D" parent="Body" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23422, 0)
+[node name="Torso" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.23422, 0)
 mesh = SubResource("BoxMesh_22uf2")
+skeleton = NodePath("../../Body")
+
+[node name="BodyCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ig7uv")
