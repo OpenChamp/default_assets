@@ -27,7 +27,7 @@
             "model_scale": {
                 "x": 0.3,
                 "y": 1.0,
-                "z": 0.3 
+                "z": 0.3
             },
             "model_rotation": {
                 "x": 0.0,
@@ -46,66 +46,65 @@
         "base_stats": {
             "health": 600,
             "health_regen": 10,
-
             "mana": 280,
             "mana_regen": 35,
-            
             "armor": 26,
             "magic_resist": 30,
-
             "armor_pen_flat": 0,
             "armor_pen_percent": 0,
-
             "magic_pen_flat": 0,
             "magic_pen_percent": 0,
-
             "attack_range": 1250,
             "attack_damage": 60,
             "attack_speed": 75,
             "attack_crit_chance": 0,
             "attack_crit_damage": 10,
-
             "ability_power": 0,
             "ability_haste": 0,
-
             "omnivamp": 5,
             "physical_vamp": 0,
             "magic_vamp": 0,
             "true_vamp": 0,
-
             "movement_speed": 500
         },
-        "stat_growth":{
+        "stat_growth": {
             "health": 100,
             "health_regen": 5,
-
             "mana": 35,
             "mana_regen": 5,
-            
             "armor": 5,
             "magic_resist": 2,
-
             "armor_pen_flat": 5,
             "armor_pen_percent": 0,
-
             "magic_pen_flat": 0,
             "magic_pen_percent": 0,
-
             "attack_range": 25,
             "attack_damage": 5,
             "attack_speed": 10,
             "attack_crit_chance": 0,
             "attack_crit_damage": 0,
-
             "ability_power": 0,
             "ability_haste": 0,
-
             "omnivamp": 1,
             "physical_vamp": 0,
             "magic_vamp": 0,
             "true_vamp": 0,
-
             "movement_speed": 0
+        },
+        "abilities": {
+            "passive": {
+                "display_id": "openchamp:mark_of_the_hunter",
+                "texture_id": "openchamp:abilities/mark_of_the_hunter",
+                "base_values": {
+                    "base_id": "OnHitDamageEffect",
+                    "display_id": "openchamp:mark_of_the_hunter",
+                    "is_exclusive": true,
+                    "damage": 20,
+                    "scaling": "10 + 0.01 t.max.hp",
+                    "can_crit": false,
+                    "damage_type": "true"
+                }
+            }
         }
     }
 }

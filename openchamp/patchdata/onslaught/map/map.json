@@ -25,7 +25,7 @@
                     "y": 0,
                     "z": 0
                 },
-                "spawn_behaviour":{
+                "spawn_behaviour": {
                     "respawn_enabled": true,
                     "respawn_time": 30,
                     "respawn_time_growth_level": 5,
@@ -41,7 +41,7 @@
                     "y": 0,
                     "z": 0
                 },
-                "spawn_behaviour":{
+                "spawn_behaviour": {
                     "unit_type": "openchamp:ranged_minion",
                     "unit_level": 1,
                     "unit_level_growth": 1,
@@ -62,7 +62,7 @@
                     "y": 0,
                     "z": 0
                 },
-                "spawn_behaviour":{
+                "spawn_behaviour": {
                     "unit_type": "openchamp:melee_minion",
                     "unit_level": 1,
                     "unit_level_growth": 1,

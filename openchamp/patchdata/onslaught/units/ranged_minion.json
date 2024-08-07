@@ -5,7 +5,7 @@
         "id": "openchamp:ranged_minion",
         "model": "openchamp:npc/ranged_minion",
         "is_character": false,
-        "aggro_type":"aggressive",
+        "aggro_type": "aggressive",
         "aggro_distance": 300.0,
         "deaggro_distance": 1000.0,
         "kill_gold": 150,
@@ -26,7 +26,7 @@
             "model_scale": {
                 "x": 0.3,
                 "y": 1.0,
-                "z": 0.3 
+                "z": 0.3
             },
             "model_rotation": {
                 "x": 0.0,
@@ -45,37 +45,29 @@
         "base_stats": {
             "health": 100,
             "health_regen": 0,
-
             "mana": 280,
             "mana_regen": 7,
-            
             "armor": 26,
             "magic_resist": 30,
-
             "attack_range": 500,
             "attack_damage": 60,
             "attack_speed": 75,
             "attack_crit_chance": 0,
             "attack_crit_damage": 10,
-
             "movement_speed": 250
         },
-        "stat_growth":{
+        "stat_growth": {
             "health": 50,
             "health_regen": 5,
-
             "mana": 35,
             "mana_regen": 5,
-            
             "armor": 5,
             "magic_resist": 2,
-
             "attack_range": 10,
             "attack_damage": 15,
             "attack_speed": 5,
             "attack_crit_chance": 5,
             "attack_crit_damage": 0,
-
             "movement_speed": 10
         }
     }
