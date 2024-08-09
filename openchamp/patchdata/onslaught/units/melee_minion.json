@@ -23,7 +23,7 @@
         },
         "windup_fraction": 0.3,
         "base_stats": {
-            "health": 200,
+            "health": 300,
             "health_regen": 0,
             "mana": 280,
             "mana_regen": 7,
@@ -37,12 +37,12 @@
             "movement_speed": 300
         },
         "stat_growth": {
-            "health": 75,
+            "health": 65,
             "health_regen": 5,
             "mana": 35,
             "mana_regen": 5,
             "armor": 5,
-            "magic_resist": 2,
+            "magic_resist": 3,
             "attack_range": 10,
             "attack_damage": 10,
             "attack_speed": 5,

@@ -80,7 +80,9 @@
 
 
     "SCALING:STAT_SET:base": "Base",
+    "SCALING:STAT_SET:bonus": "Bonus",
     "SCALING:STAT_SET:max": "Max",
+    "SCALING:STAT_SET:missing": "Missing",
     "SCALING:STAT_SET:current": "Current",
 
     "SCALING:ACTOR:caster": "Caster",

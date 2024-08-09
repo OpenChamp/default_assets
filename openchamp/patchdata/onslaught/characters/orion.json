@@ -44,7 +44,7 @@
         },
         "windup_fraction": 0.1,
         "base_stats": {
-            "health": 600,
+            "health": 1600,
             "health_regen": 10,
             "mana": 280,
             "mana_regen": 35,
@@ -55,7 +55,7 @@
             "magic_pen_flat": 0,
             "magic_pen_percent": 0,
             "attack_range": 1250,
-            "attack_damage": 60,
+            "attack_damage": 70,
             "attack_speed": 75,
             "attack_crit_chance": 0,
             "attack_crit_damage": 10,
@@ -68,7 +68,7 @@
             "movement_speed": 500
         },
         "stat_growth": {
-            "health": 100,
+            "health": 80,
             "health_regen": 5,
             "mana": 35,
             "mana_regen": 5,
@@ -101,9 +101,9 @@
                     "is_exclusive": true,
                     "effect_source": "ability_single",
                     "damage": 20,
-                    "scaling": "10 + 0.01 t.max.hp",
+                    "scaling": "10 + 0.02 t.max.hp",
                     "can_crit": false,
-                    "damage_type": "true"
+                    "damage_type": "magical"
                 }
             }
         }
