@@ -99,6 +99,7 @@
                     "base_id": "OnHitDamageEffect",
                     "display_id": "openchamp:mark_of_the_hunter",
                     "is_exclusive": true,
+                    "effect_source": "ability_single",
                     "damage": 20,
                     "scaling": "10 + 0.01 t.max.hp",
                     "can_crit": false,
