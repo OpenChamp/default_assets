@@ -21,27 +21,6 @@
             "basic_defense": 2,
             "basic_damage": 8
         },
-        "attack_projectile": {
-            "model": "openchamp:particles/arrow",
-            "model_scale": {
-                "x": 0.3,
-                "y": 1.0,
-                "z": 0.3
-            },
-            "model_rotation": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "spawn_offset": {
-                "x": 0.0,
-                "y": 1.0,
-                "z": 0.0
-            },
-            "speed": 20.0,
-            "damage_type": "physical"
-        },
-        "windup_fraction": 0.3,
         "base_stats": {
             "health": 200,
             "health_regen": 0,
@@ -69,6 +48,40 @@
             "attack_crit_chance": 5,
             "attack_crit_damage": 0,
             "movement_speed": 10
+        },
+        "abilities": {
+            "basic_attack": {
+                "display_id": "openchamp:basic_attack",
+                "texture_id": "openchamp:basic_attack",
+                "base_values": {
+                    "base_id": "PointAndClickProjectile",
+                    "display_id": "openchamp:ranged_basic_attack",
+                    "as_scaled": true,
+                    "use_attack_range": true,
+                    "effect_source": "basic_attack",
+                    "windup_ratio": 0.3,
+                    "projectile": {
+                        "model": "openchamp:particles/arrow",
+                        "model_scale": {
+                            "x": 0.3,
+                            "y": 1.0,
+                            "z": 0.3
+                        },
+                        "model_rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "spawn_offset": {
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.0
+                        },
+                        "speed": 20.0,
+                        "damage_type": "physical"
+                    }
+                }
+            }
         }
     }
 }

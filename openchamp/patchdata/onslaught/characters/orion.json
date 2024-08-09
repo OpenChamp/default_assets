@@ -22,27 +22,6 @@
             "basic_defense": 2,
             "basic_damage": 8
         },
-        "attack_projectile": {
-            "model": "openchamp:particles/arrow",
-            "model_scale": {
-                "x": 0.3,
-                "y": 1.0,
-                "z": 0.3
-            },
-            "model_rotation": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "spawn_offset": {
-                "x": 0.0,
-                "y": 1.0,
-                "z": 0.0
-            },
-            "speed": 30.0,
-            "damage_type": "physical"
-        },
-        "windup_fraction": 0.1,
         "base_stats": {
             "health": 1600,
             "health_regen": 10,
@@ -92,6 +71,38 @@
             "movement_speed": 0
         },
         "abilities": {
+            "basic_attack": {
+                "display_id": "openchamp:basic_attack",
+                "texture_id": "openchamp:basic_attack",
+                "base_values": {
+                    "base_id": "PointAndClickProjectile",
+                    "display_id": "openchamp:ranged_basic_attack",
+                    "as_scaled": true,
+                    "use_attack_range": true,
+                    "effect_source": "basic_attack",
+                    "windup_ratio": 0.1,
+                    "projectile": {
+                        "model": "openchamp:particles/arrow",
+                        "model_scale": {
+                            "x": 0.3,
+                            "y": 1.0,
+                            "z": 0.3
+                        },
+                        "model_rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "spawn_offset": {
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.0
+                        },
+                        "speed": 30.0,
+                        "damage_type": "physical"
+                    }
+                }
+            },
             "passive": {
                 "display_id": "openchamp:mark_of_the_hunter",
                 "texture_id": "openchamp:abilities/mark_of_the_hunter",
