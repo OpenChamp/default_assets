@@ -81,6 +81,7 @@
                     "use_attack_range": true,
                     "effect_source": "basic_attack",
                     "windup_ratio": 0.1,
+                    "scaling": "0 + 1.0 c.curr.attack_damage",
                     "projectile": {
                         "model": "openchamp:particles/arrow",
                         "model_scale": {
@@ -117,6 +118,59 @@
                     "can_crit": false,
                     "damage_type": "magical"
                 }
+            },
+            "ability_1": {
+                "display_id": "openchamp:orion_ability_1",
+                "texture_id": "openchamp:basic_attack",
+                "has_upgrades": true,
+                "base_values": {
+                    "base_id": "PointAndClickProjectile",
+                    "display_id": "openchamp:orion_ability_1",
+                    "as_scaled": false,
+                    "cooldown": 5,
+                    "channel_time": 0.5,
+                    "use_attack_range": false,
+                    "casting_range": 1500,
+                    "effect_source": "ability_single",
+                    "projectile": {
+                        "model": "openchamp:particles/arrow",
+                        "model_scale": {
+                            "x": 0.3,
+                            "y": 1.0,
+                            "z": 0.3
+                        },
+                        "model_rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "spawn_offset": {
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.0
+                        },
+                        "speed": 30.0,
+                        "damage_type": "physical",
+                        "launch_sfx": "openchamp:sfx/game/basic_attack_1"
+                    }
+                },
+                "ability_data": [
+                    {
+                        "scaling": "100 + 1.5 c.curr.attack_damage"
+                    },
+                    {
+                        "scaling": "200 + 1.5 c.curr.attack_damage"
+                    },
+                    {
+                        "scaling": "300 + 1.5 c.curr.attack_damage"
+                    },
+                    {
+                        "scaling": "400 + 1.5 c.curr.attack_damage"
+                    },
+                    {
+                        "scaling": "500 + 1.5 c.curr.attack_damage"
+                    }
+                ]
             }
         }
     }
