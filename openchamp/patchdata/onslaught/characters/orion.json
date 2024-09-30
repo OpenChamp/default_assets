@@ -106,11 +106,11 @@
                 }
             },
             "passive": {
-                "display_id": "openchamp:mark_of_the_hunter",
-                "texture_id": "openchamp:abilities/mark_of_the_hunter",
+                "display_id": "openchamp:orion:passive",
+                "texture_id": "openchamp:units/characters/orion/passive",
                 "base_values": {
                     "base_id": "OnHitDamageEffect",
-                    "display_id": "openchamp:mark_of_the_hunter",
+                    "display_id": "openchamp:orion:passive_fx",
                     "is_exclusive": true,
                     "effect_source": "ability_single",
                     "damage": 20,
@@ -120,12 +120,12 @@
                 }
             },
             "ability_1": {
-                "display_id": "openchamp:orion_ability_1",
-                "texture_id": "openchamp:basic_attack",
+                "display_id": "openchamp:orion:ability_1",
+                "texture_id": "openchamp:units/characters/orion/ability_1",
                 "has_upgrades": true,
                 "base_values": {
                     "base_id": "PointAndClickProjectile",
-                    "display_id": "openchamp:orion_ability_1",
+                    "display_id": "openchamp:orion:ability_1_fx",
                     "as_scaled": false,
                     "cooldown": 5,
                     "channel_time": 0.5,
