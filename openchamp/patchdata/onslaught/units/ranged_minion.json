@@ -60,7 +60,7 @@
                     "use_attack_range": true,
                     "effect_source": "basic_attack",
                     "windup_ratio": 0.3,
-                    "scaling": "0 + 1.0 c.curr.attack_damage",
+                    "scaling": "0 + 1.0 c.curr.dmg_phy",
                     "projectile": {
                         "model": "openchamp:particles/arrow",
                         "model_scale": {
