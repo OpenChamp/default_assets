@@ -131,6 +131,7 @@
                     "channel_time": 0.5,
                     "use_attack_range": false,
                     "casting_range": 1500,
+                    "cost": 40,
                     "effect_source": "ability_single",
                     "projectile": {
                         "model": "openchamp:particles/arrow",
@@ -171,7 +172,163 @@
                         "scaling": "500 + 1.5 c.curr.dmg_phy"
                     }
                 ]
-            }
+            },
+            "ability_2": {
+                "display_id": "openchamp:orion:ability_2",
+                "texture_id": "openchamp:units/characters/orion/ability_2",
+                "has_upgrades": true,
+                "base_values": {
+                    "base_id": "PointAndClickProjectile",
+                    "display_id": "openchamp:orion:ability_2_fx",
+                    "as_scaled": false,
+                    "cooldown": 5,
+                    "channel_time": 0.5,
+                    "use_attack_range": false,
+                    "casting_range": 1500,
+                    "cost": 70,
+                    "effect_source": "ability_single",
+                    "projectile": {
+                        "model": "openchamp:particles/arrow",
+                        "model_scale": {
+                            "x": 0.3,
+                            "y": 1.0,
+                            "z": 0.3
+                        },
+                        "model_rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "spawn_offset": {
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.0
+                        },
+                        "speed": 30.0,
+                        "damage_type": "physical",
+                        "launch_sfx": "openchamp:sfx/game/basic_attack_1"
+                    }
+                },
+                "ability_data": [
+                    {
+                        "scaling": "100 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "200 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "300 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "400 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "500 + 1.5 c.curr.dmg_phy"
+                    }
+                ]
+            },
+            "ability_3": {
+                "display_id": "openchamp:orion:ability_3",
+                "texture_id": "openchamp:units/characters/orion/ability_3",
+                "has_upgrades": true,
+                "base_values": {
+                    "base_id": "PointAndClickProjectile",
+                    "display_id": "openchamp:orion:ability_3_fx",
+                    "as_scaled": false,
+                    "cooldown": 5,
+                    "channel_time": 0.5,
+                    "use_attack_range": false,
+                    "casting_range": 1500,
+                    "cost": 40,
+                    "effect_source": "ability_single",
+                    "projectile": {
+                        "model": "openchamp:particles/arrow",
+                        "model_scale": {
+                            "x": 0.3,
+                            "y": 1.0,
+                            "z": 0.3
+                        },
+                        "model_rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "spawn_offset": {
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.0
+                        },
+                        "speed": 30.0,
+                        "damage_type": "physical",
+                        "launch_sfx": "openchamp:sfx/game/basic_attack_1"
+                    }
+                },
+                "ability_data": [
+                    {
+                        "scaling": "100 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "200 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "300 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "400 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "500 + 1.5 c.curr.dmg_phy"
+                    }
+                ]
+            },
+            "ability_4": {
+                "display_id": "openchamp:orion:ability_4",
+                "texture_id": "openchamp:units/characters/orion/ability_4",
+                "has_upgrades": true,
+                "base_values": {
+                    "base_id": "PointAndClickProjectile",
+                    "display_id": "openchamp:orion:ability_4_fx",
+                    "as_scaled": false,
+                    "cooldown": 5,
+                    "channel_time": 0.5,
+                    "use_attack_range": false,
+                    "casting_range": 3000,
+                    "cost": 100,
+                    "effect_source": "ability_single",
+                    "projectile": {
+                        "model": "openchamp:particles/arrow",
+                        "model_scale": {
+                            "x": 0.3,
+                            "y": 1.0,
+                            "z": 0.3
+                        },
+                        "model_rotation": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "spawn_offset": {
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.0
+                        },
+                        "speed": 30.0,
+                        "damage_type": "physical",
+                        "launch_sfx": "openchamp:sfx/game/basic_attack_1"
+                    }
+                },
+                "ability_data": [
+                    {
+                        "scaling": "300 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "600 + 1.5 c.curr.dmg_phy"
+                    },
+                    {
+                        "scaling": "900 + 1.5 c.curr.dmg_phy"
+                    }
+                ]
+            },
         }
     }
 }

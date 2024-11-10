@@ -19,7 +19,7 @@ def load_patchdata(patachdata_dir) -> Dict:
 
     for gamemode in gamemodes:
         gamemode_manifest = {
-            'created_at': datetime.datetime.now(datetime.UTC).isoformat(),
+            'created_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
             'gamemode': gamemode,
         }
 
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     main_manifest = {
         'version': args['version'],
         'update_url': args['update_url'],
-        'created_at': datetime.datetime.now(datetime.UTC).isoformat(),
+        'created_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'asset_groups': asset_groups,
     }
 
